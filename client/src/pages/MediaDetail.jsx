@@ -1,7 +1,11 @@
 import React from "react";
 
 function MediaDetail() {
-  return <div></div>;
+  return (
+    <div>
+      <div>MediaDetail</div>
+    </div>
+  );
 }
 
 export default MediaDetail;
