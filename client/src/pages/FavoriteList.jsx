@@ -1,7 +1,7 @@
 import React from "react";
 
 function favoriteList() {
-  return <div></div>;
+  return <div>favoriteList</div>;
 }
 
 export default favoriteList;

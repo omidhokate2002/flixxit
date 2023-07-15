@@ -24,10 +24,12 @@ mongoose
   .then(() => {
     console.log("Mongodb connected");
     server.listen(port, () => {
-      console.log(`Server is listening on ${port}`);
+      console.log(`Server is listening on port ${port}`);
     });
   })
   .catch((err) => {
     console.log({ err });
     process.exit(1);
   });
+
+//test

@@ -4,6 +4,7 @@ import React from "react";
 import GlobalLoading from "../common/GlobalLoading.jsx";
 import Footer from "../common/Footer.jsx";
 import Topbar from "../common/Topbar.jsx";
+import AuthModal from "../common/AuthModal.jsx";
 
 function MainLayout() {
   return (
@@ -13,6 +14,7 @@ function MainLayout() {
       {/* global-loading */}
 
       {/* login modal */}
+      <AuthModal />
       {/* login modal */}
 
       <Box display="flex" minHeight="100vh">

@@ -9,7 +9,6 @@
 const HomePage = () => {
   return (
     <>
-      <h1>Hi this is Home Page</h1>
       {/* <HeroSlide
         mediaType={tmdbConfigs.mediaType.movie}
         mediaCategory={tmdbConfigs.mediaCategory.popular}
