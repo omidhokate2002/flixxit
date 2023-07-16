@@ -8,14 +8,14 @@ const mediaCategory = {
   top_rated: "top_rated",
 };
 
-const backdropPath = (imgEndpoints) =>
-  `http://image.tmdb.org/t/p/originals${imgEndpoints}`;
+const backdropPath = (imgEndpoint) =>
+  `https://image.tmdb.org/t/p/original${imgEndpoint}`;
 
-const posterPath = (imgEndpoints) =>
-  `http://image.tmdb.org/t/p/w500${imgEndpoints}`;
+const posterPath = (imgEndpoint) =>
+  `https://image.tmdb.org/t/p/w500${imgEndpoint}`;
 
 const youtubePath = (videoId) =>
-  `http://www.youtube.com/embeded/${videoId}?controls=0`;
+  `https://www.youtube.com/embed/${videoId}?controls=0`;
 
 const tmdbConfigs = {
   mediaType,
