@@ -1,10 +1,10 @@
-import privateClient from "../client/private.client.js";
-import publicClient from "../client/public.client.js";
+import privateClient from "../client/private.client";
+import publicClient from "../client/public.client";
 
 const mediaEndpoints = {
   list: ({ mediaType, mediaCategory, page }) =>
     `${mediaType}/${mediaCategory}?page=${page}`,
-  delete: ({ mediaType, mediaId }) => `${mediaType}/fr${mediaId}`,
+  detail: ({ mediaType, mediaId }) => `${mediaType}/detail/${mediaId}`,
   search: ({ mediaType, query, page }) =>
     `${mediaType}/search?query=${query}&page=${page}`,
 };
@@ -21,7 +21,7 @@ const mediaApi = {
       return { err };
     }
   },
-  getdetail: async ({ mediaType, mediaId }) => {
+  getDetail: async ({ mediaType, mediaId }) => {
     try {
       const response = await privateClient.get(
         mediaEndpoints.detail({ mediaType, mediaId })
