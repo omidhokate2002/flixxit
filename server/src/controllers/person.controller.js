@@ -7,7 +7,7 @@ const personDetail = async (req, res) => {
 
     const person = await tmdbApi.personDetail({ personId });
 
-    responseHandler.ok(res.person);
+    responseHandler.ok(res, person);
   } catch {
     responseHandler.error(res);
   }
@@ -25,7 +25,4 @@ const personMedias = async (req, res) => {
   }
 };
 
-export default {
-  personDetail,
-  personMedias,
-};
+export default { personDetail, personMedias };

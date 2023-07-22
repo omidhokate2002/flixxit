@@ -1,4 +1,4 @@
-import privateClient from "../client/private.client.js";
+import privateClient from "../client/private.client";
 
 const favoriteEndpoints = {
   list: "user/favorites",
@@ -16,7 +16,6 @@ const favoriteApi = {
       return { err };
     }
   },
-
   add: async ({ mediaId, mediaType, mediaTitle, mediaPoster, mediaRate }) => {
     try {
       const response = await privateClient.post(favoriteEndpoints.add, {
@@ -32,13 +31,10 @@ const favoriteApi = {
       return { err };
     }
   },
-
   remove: async ({ favoriteId }) => {
     try {
       const response = await privateClient.delete(
-        favoriteEndpoints.remove({
-          favoriteId,
-        })
+        favoriteEndpoints.remove({ favoriteId })
       );
 
       return { response };

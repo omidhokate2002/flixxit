@@ -32,7 +32,7 @@ const remove = async (req, res) => {
       user: req.user.id,
     });
 
-    if (!review) return responseHandler.notFound(res);
+    if (!review) return responseHandler.notfound(res);
 
     await review.remove();
 
@@ -56,8 +56,4 @@ const getReviewsOfUser = async (req, res) => {
   }
 };
 
-export default {
-  create,
-  remove,
-  getReviewsOfUser,
-};
+export default { create, remove, getReviewsOfUser };

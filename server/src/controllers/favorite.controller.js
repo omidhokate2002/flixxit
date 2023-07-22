@@ -32,7 +32,7 @@ const removeFavorite = async (req, res) => {
       _id: favoriteId,
     });
 
-    if (!favorite) return responseHandler.notFound(res);
+    if (!favorite) return responseHandler.notfound(res);
 
     await favorite.remove();
 
@@ -54,8 +54,4 @@ const getFavoritesOfUser = async (req, res) => {
   }
 };
 
-export default {
-  addFavorite,
-  removeFavorite,
-  getFavoritesOfUser,
-};
+export default { addFavorite, removeFavorite, getFavoritesOfUser };

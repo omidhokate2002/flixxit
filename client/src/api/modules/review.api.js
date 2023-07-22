@@ -22,7 +22,6 @@ const reviewApi = {
       return { err };
     }
   },
-
   remove: async ({ reviewId }) => {
     try {
       const response = await privateClient.delete(
@@ -34,7 +33,7 @@ const reviewApi = {
       return { err };
     }
   },
-  get: async () => {
+  getList: async () => {
     try {
       const response = await privateClient.get(reviewEndpoints.list);
 

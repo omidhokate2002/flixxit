@@ -1,17 +1,15 @@
-import publicClient from "../client/public.client.js";
+import publicClient from "../client/public.client";
 
 const personEndpoints = {
-  details: ({ personId }) => `person/${personId}`,
+  detail: ({ personId }) => `person/${personId}`,
   medias: ({ personId }) => `person/${personId}/medias`,
 };
 
 const personApi = {
-  details: async ({ personId }) => {
+  detail: async ({ personId }) => {
     try {
       const response = await publicClient.get(
-        personEndpoints.details({
-          personId,
-        })
+        personEndpoints.detail({ personId })
       );
 
       return { response };
@@ -19,13 +17,10 @@ const personApi = {
       return { err };
     }
   },
-
   medias: async ({ personId }) => {
     try {
       const response = await publicClient.get(
-        personEndpoints.medias({
-          personId,
-        })
+        personEndpoints.medias({ personId })
       );
 
       return { response };
