@@ -21,9 +21,6 @@ const NavigationSwiper = ({ children }) => {
             fontSize: { xs: "1rem", md: "2rem" },
           },
         },
-        // "& .swiper": {
-        //   paddingX: { xs: "1rem", md: "4rem" },
-        // },
       }}
     >
       <Swiper

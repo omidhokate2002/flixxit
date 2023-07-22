@@ -7,6 +7,7 @@ import MediaSearch from "../pages/MediaSearch";
 import PasswordUpdate from "../pages/PasswordUpdate";
 import ReviewList from "../pages/ReviewList";
 import ProtectedPage from "../components/common/ProtectedPage";
+import AboutPage from "../pages/AboutPage";
 
 export const routesGen = {
   home: "/",
@@ -69,6 +70,10 @@ const routes = [
   {
     path: "/:mediaType/:mediaId",
     element: <MediaDetail />,
+  },
+  {
+    path: "/about",
+    element: <AboutPage />,
   },
 ];
 
