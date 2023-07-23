@@ -21,8 +21,7 @@ app.use(
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-//vercel.live/link/flixxit-t89d-d4elfslf8-omidhokate2002.vercel.app?via=deployment-domains-list-commit
-https: app.use("/api/v1", routes);
+app.use("/api/v1", routes);
 
 const port = process.env.PORT || 5000;
 
@@ -40,5 +39,3 @@ mongoose
     console.log({ err });
     process.exit(1);
   });
-
-//test
