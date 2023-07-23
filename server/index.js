@@ -12,7 +12,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
-      "https://flixxit-t89d.vercel.app/",
+      "https://flixxit-t89d.vercel.app",
       "https://vercel.live/link/flixxit-t89d-git-main-omidhokate2002.vercel.app?via=deployment-domains-list-branch",
       "https://vercel.live/link/flixxit-t89d-d4elfslf8-omidhokate2002.vercel.app?via=deployment-domains-list-commit",
     ],
