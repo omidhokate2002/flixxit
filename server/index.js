@@ -10,7 +10,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["http://localhost:3000/", "https://flixit-client.vercel.app/"],
+    origin: ["http://localhost:3000", "https://flixit-client.vercel.app"],
   })
 );
 app.use(express.json());
