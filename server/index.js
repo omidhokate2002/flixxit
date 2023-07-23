@@ -16,8 +16,10 @@ app.use(
       "https://vercel.live/link/flixxit-t89d-git-main-omidhokate2002.vercel.app?via=deployment-domains-list-branch",
       "https://vercel.live/link/flixxit-t89d-d4elfslf8-omidhokate2002.vercel.app?via=deployment-domains-list-commit",
     ],
+    credentials: true,
   })
 );
+app.options("*", cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
