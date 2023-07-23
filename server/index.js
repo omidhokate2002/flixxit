@@ -10,14 +10,19 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://flixit-client.vercel.app"],
+    origin: [
+      "http://localhost:3000",
+      "https://flixxit-t89d.vercel.app/",
+      "https://vercel.live/link/flixxit-t89d-git-main-omidhokate2002.vercel.app?via=deployment-domains-list-branch",
+      "https://vercel.live/link/flixxit-t89d-d4elfslf8-omidhokate2002.vercel.app?via=deployment-domains-list-commit",
+    ],
   })
 );
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-
-app.use("/api/v1", routes);
+//vercel.live/link/flixxit-t89d-d4elfslf8-omidhokate2002.vercel.app?via=deployment-domains-list-commit
+https: app.use("/api/v1", routes);
 
 const port = process.env.PORT || 5000;
 
