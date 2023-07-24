@@ -15,6 +15,35 @@ const SignupForm = ({ switchAuthState }) => {
   const [isLoginRequest, setIsLoginRequest] = useState(false);
   const [errorMessage, setErrorMessage] = useState();
 
+  const initiatePayment = () => {
+    const options = {
+      key: process.env.RAZORPAY_KEY_ID,
+      amount: 10000, // The amount in paise (10000 paise = Rs. 100)
+      currency: "INR",
+      name: "Your Store Name",
+      description: "Test Transaction",
+      order_id: "order_MHZzzrf7iZhoCj", // Replace this with the actual order ID from your backend
+      handler: function (response) {
+        // This function will be executed when the payment is successful
+        console.log("Payment successful!", response);
+      },
+      prefill: {
+        name: "John Doe", // Pre-populate customer's name
+        email: "john@example.com", // Pre-populate customer's email
+        contact: "1234567890", // Pre-populate customer's contact number
+      },
+      notes: {
+        address: "Razorpay Corporate Office", // Add any additional notes
+      },
+      theme: {
+        color: "#F37254", // Customize the theme color
+      },
+    };
+
+    const paymentWindow = new window.Razorpay(options);
+    return paymentWindow.open();
+  };
+
   const signinForm = useFormik({
     initialValues: {
       password: "",
@@ -133,6 +162,10 @@ const SignupForm = ({ switchAuthState }) => {
 
       <Button fullWidth sx={{ marginTop: 1 }} onClick={() => switchAuthState()}>
         sign in
+      </Button>
+
+      <Button fullWidth sx={{ marginTop: 1 }} onClick={() => initiatePayment()}>
+        Pay now
       </Button>
 
       {errorMessage && (
