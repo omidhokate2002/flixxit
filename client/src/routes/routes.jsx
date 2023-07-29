@@ -8,6 +8,7 @@ import PasswordUpdate from "../pages/PasswordUpdate";
 import ReviewList from "../pages/ReviewList";
 import ProtectedPage from "../components/common/ProtectedPage";
 import AboutPage from "../pages/AboutPage";
+import PaymentPage from "../components/common/PaymentPage";
 
 export const routesGen = {
   home: "/",
@@ -18,6 +19,8 @@ export const routesGen = {
   favoriteList: "/favorites",
   reviewList: "/reviews",
   passwordUpdate: "password-update",
+  about: "/about",
+  payment: "/payment",
 };
 
 const routes = [
@@ -30,6 +33,10 @@ const routes = [
     path: "/person/:personId",
     element: <PersonDetail />,
     state: "person.detail",
+  },
+  {
+    path: "/payment",
+    element: <PaymentPage />,
   },
   {
     path: "/search",
@@ -74,6 +81,7 @@ const routes = [
   {
     path: "/about",
     element: <AboutPage />,
+    state: "about",
   },
 ];
 
