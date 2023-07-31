@@ -8,6 +8,7 @@ import Logo from "./Logo";
 import publicClient from "../../api/client/public.client";
 import { useNavigate } from "react-router-dom";
 import { LoadingButton } from "@mui/lab";
+import { toast } from "react-toastify";
 
 const PaymentPage = () => {
   const navigate = useNavigate();
@@ -19,15 +20,16 @@ const PaymentPage = () => {
       key: process.env.RAZORPAY_KEY_ID,
       amount: amount, // The amount in paise (10000 paise = Rs. 100)
       currency: "INR",
-      name: "Your Store Name",
-      description: "Test Transaction",
+      name: "Flixxit",
+      description: "Flixxit: Your Ultimate Movie Subscription Transition App!",
       order_id: orderDetails.id, // Replace this with the actual order ID from your backend
       handler: async function (response) {
         try {
           // This function will be executed when the payment is successful
           const verifyPayment = await publicClient.post(
             "/payment/verify",
-            response
+            response,
+            toast.success("Sign in success")
           );
           if (verifyPayment !== null) navigate("/");
         } catch (err) {
