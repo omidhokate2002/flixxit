@@ -26,7 +26,7 @@ const PersonDetail = () => {
     };
 
     getPerson();
-  }, [personId]);
+  }, [dispatch, personId]);
 
   return (
     <>

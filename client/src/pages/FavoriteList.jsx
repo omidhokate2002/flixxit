@@ -75,7 +75,7 @@ const FavoriteList = () => {
     };
 
     getFavorites();
-  }, []);
+  }, [dispatch]);
 
   const onLoadMore = () => {
     setFilteredMedias([

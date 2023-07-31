@@ -3,14 +3,15 @@ import { Alert, Box, Button, Stack, TextField } from "@mui/material";
 import { useFormik } from "formik";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { toast } from "react-toastify";
 import * as Yup from "yup";
 import userApi from "../../api/modules/user.api";
 import { setAuthModalOpen } from "../../redux/features/authModalSlice";
 import { setUser } from "../../redux/features/userSlice";
+import { useNavigate } from "react-router-dom";
 
 const SignupForm = ({ switchAuthState }) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const [isLoginRequest, setIsLoginRequest] = useState(false);
   const [errorMessage, setErrorMessage] = useState();
@@ -47,7 +48,7 @@ const SignupForm = ({ switchAuthState }) => {
         signinForm.resetForm();
         dispatch(setUser(response));
         dispatch(setAuthModalOpen(false));
-        toast.success("Sign in success");
+        navigate("/payment");
       }
 
       if (err) setErrorMessage(err.message);

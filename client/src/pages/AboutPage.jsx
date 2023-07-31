@@ -1,73 +1,106 @@
-import React, { useState } from "react";
-import { Typography } from "@mui/material";
-import Container from "../components/common/Container.jsx";
+import React from "react";
+import { Typography, Box } from "@mui/material";
+import Container from "../components/common/Container";
 
 const AboutPage = () => {
-  const [currentDateTime] = useState(new Date());
-
   return (
-    <Container>
-      <Typography variant="h4">About</Typography>
-      <Typography>
+    <Container maxWidth="md">
+      <Typography variant="h1" color="primary" align="center" sx={{ mb: 4 }}>
+        About
+      </Typography>
+      <Box sx={{ textAlign: "justify", lineHeight: 1.6 }}>
         This project is a Netflix clone built using React and Material UI. It
         uses the TMDB API to fetch data about movies and TV shows, and it allows
         users to browse, search, and watch content.
-      </Typography>
-      <Typography>
+      </Box>
+      <Typography variant="body1" sx={{ mt: 4 }}>
         The project was built to learn more about React and Material UI, and to
-        practice using some of the features of these libraries, such as:
+        practice using some of the features such as:
       </Typography>
       <ul>
-        <li>Custom hooks</li>
-        <li>Context</li>
-        <li>Lazy loading</li>
-        <li>Portals</li>
-        <li>Forwarded refs</li>
-        <li>Higher-order components</li>
-        <li>Custom themes</li>
-        <li>RTK</li>
+        <li>
+          <Typography variant="body1">Create React App</Typography>
+        </li>
+        <li>
+          <Typography variant="body1">Material UI</Typography>
+        </li>
+        <li>
+          <Typography variant="body1">Mongoose</Typography>
+        </li>
+        <li>
+          <Typography variant="body1">ExpressJS</Typography>
+        </li>
+        <li>
+          <Typography variant="body1">React Router</Typography>
+        </li>
+        <li>
+          <Typography variant="body1">Axios</Typography>
+        </li>
+        <li>
+          <Typography variant="body1">ThemovieDB</Typography>
+        </li>
+        <li>
+          <Typography variant="body1">JWT</Typography>
+        </li>
       </ul>
-      <Typography>
-        The project is still under development, but it is already functional and
-        can be used to watch movies and TV shows.
-      </Typography>
-      <Typography>
-        <b>Features</b>
-      </Typography>
-      <ul>
-        <li>A home page with a carousel of featured movies and TV shows</li>
-        <li>A search bar for finding content</li>
-        <li>A grid of genres for browsing content</li>
-        <li>Detail pages for individual movies and TV shows</li>
-        <li>The ability to watch trailers</li>
-        <li>The ability to add movies and TV shows to a watchlist</li>
-      </ul>
-      <Typography>
-        <b>Technical Details</b>
-      </Typography>
-      <ul>
-        <li>React</li>
-        <li>Material UI</li>
-        <li>TypeScript</li>
-        <li>TMDB API</li>
-      </ul>
-      <Typography>
-        <b>Contributing</b>
-      </Typography>
-      <Typography>
-        The project is open to contributions. If you would like to contribute,
-        please fork the project on GitHub and submit a pull request.
-      </Typography>
-      <Typography>
-        <b>Thank you for visiting!</b>
-      </Typography>
-      <Typography>
-        I hope you enjoy this project. If you have any questions or suggestions,
-        please feel free to contact me.
-      </Typography>
-      <Typography>
-        <b>Current Time:</b> {currentDateTime.toLocaleString()}
-      </Typography>
+
+      <Box sx={{ mt: 4 }}>
+        <Typography variant="h5" color="primary">
+          Features
+        </Typography>
+        <ul>
+          <li>
+            <Typography variant="body1">
+              A home page with a carousel of featured movies and TV shows
+            </Typography>
+          </li>
+          <li>
+            <Typography variant="body1">
+              A search bar for finding content
+            </Typography>
+          </li>
+          <li>
+            <Typography variant="body1">
+              A grid of genres for browsing content
+            </Typography>
+          </li>
+          <li>
+            <Typography variant="body1">
+              Detail pages for individual movies and TV shows
+            </Typography>
+          </li>
+          <li>
+            <Typography variant="body1">
+              The ability to watch trailers
+            </Typography>
+          </li>
+          <li>
+            <Typography variant="body1">
+              The ability to add movies and TV shows to reviews and favorites
+            </Typography>
+          </li>
+        </ul>
+      </Box>
+
+      <Box sx={{ mt: 4 }}>
+        <Typography variant="h5" color="primary">
+          Contributing
+        </Typography>
+        <Typography variant="body1">
+          The project is open to contributions. If you would like to contribute,
+          please fork the project on GitHub and submit a pull request.
+        </Typography>
+      </Box>
+
+      <Box sx={{ mt: 4 }}>
+        <Typography variant="h5" color="primary">
+          Thank you for visiting!
+        </Typography>
+        <Typography variant="body1">
+          I hope you enjoy this project. If you have any questions or
+          suggestions, please feel free to contact me.
+        </Typography>
+      </Box>
     </Container>
   );
 };
