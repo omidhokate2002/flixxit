@@ -1,49 +1,24 @@
 import React from "react";
-import { Typography, Box } from "@mui/material";
+import { Typography, Box, Stack } from "@mui/material";
 import Container from "../components/common/Container";
+import Logo from "../components/common/Logo";
 
 const AboutPage = () => {
   return (
-    <Container maxWidth="md">
-      <Typography variant="h1" color="primary" align="center" sx={{ mb: 4 }}>
-        About
-      </Typography>
+    <Container maxWidth="md" sx={{ margin: "0 auto", maxWidth: "800px" }}>
+      <Stack
+        alignItems="center"
+        justifyContent="center" // Center horizontally and vertically
+        direction={{ xs: "column", md: "row " }}
+        sx={{ height: "max-content" }}
+      >
+        <Logo />
+      </Stack>
       <Box sx={{ textAlign: "justify", lineHeight: 1.6 }}>
-        This project is a Netflix clone built using React and Material UI. It
-        uses the TMDB API to fetch data about movies and TV shows, and it allows
-        users to browse, search, and watch content.
+        Flixxit is an OTT platform for watching movies and TV shows. It provides
+        a wide range of content for users to browse, search, and enjoy their
+        favorite movies and TV series.
       </Box>
-      <Typography variant="body1" sx={{ mt: 4 }}>
-        The project was built to learn more about React and Material UI, and to
-        practice using some of the features such as:
-      </Typography>
-      <ul>
-        <li>
-          <Typography variant="body1">Create React App</Typography>
-        </li>
-        <li>
-          <Typography variant="body1">Material UI</Typography>
-        </li>
-        <li>
-          <Typography variant="body1">Mongoose</Typography>
-        </li>
-        <li>
-          <Typography variant="body1">ExpressJS</Typography>
-        </li>
-        <li>
-          <Typography variant="body1">React Router</Typography>
-        </li>
-        <li>
-          <Typography variant="body1">Axios</Typography>
-        </li>
-        <li>
-          <Typography variant="body1">ThemovieDB</Typography>
-        </li>
-        <li>
-          <Typography variant="body1">JWT</Typography>
-        </li>
-      </ul>
-
       <Box sx={{ mt: 4 }}>
         <Typography variant="h5" color="primary">
           Features
@@ -87,8 +62,9 @@ const AboutPage = () => {
           Contributing
         </Typography>
         <Typography variant="body1">
-          The project is open to contributions. If you would like to contribute,
-          please fork the project on GitHub and submit a pull request.
+          The Flixxit project is open to contributions. If you would like to
+          contribute, please fork the project on GitHub and submit a pull
+          request.
         </Typography>
       </Box>
 
@@ -97,8 +73,9 @@ const AboutPage = () => {
           Thank you for visiting!
         </Typography>
         <Typography variant="body1">
-          I hope you enjoy this project. If you have any questions or
-          suggestions, please feel free to contact me.
+          We hope you enjoy using Flixxit for your movie and TV show
+          entertainment. If you have any questions or suggestions, please feel
+          free to contact us.
         </Typography>
       </Box>
     </Container>
