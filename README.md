@@ -81,11 +81,6 @@ To deploy this project run
 ```
 
 
-## Authors
-
-- [@omidhokate2002](https://github.com/omidhokate2002)
-
-
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file
@@ -106,5 +101,11 @@ To run this project, you will need to add the following environment variables to
 [MIT](https://choosealicense.com/licenses/mit/)
 
 
+
+## Authors
+
+- [@omidhokate2002](https://github.com/omidhokate2002)
+
+  
 ## Contributors
 - Vishnu Divakaran ([@vishnumd91](https://github.com/vishnumd91)): Razorpay Integration
