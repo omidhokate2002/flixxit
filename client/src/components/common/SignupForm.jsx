@@ -48,7 +48,7 @@ const SignupForm = ({ switchAuthState }) => {
         signinForm.resetForm();
         dispatch(setUser(response));
         dispatch(setAuthModalOpen(false));
-        navigate("/payment");
+        navigate("/");
       }
 
       if (err) setErrorMessage(err.message);
