@@ -7,11 +7,10 @@ import * as Yup from "yup";
 import userApi from "../../api/modules/user.api";
 import { setAuthModalOpen } from "../../redux/features/authModalSlice";
 import { setUser } from "../../redux/features/userSlice";
-import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const SignupForm = ({ switchAuthState }) => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const [isLoginRequest, setIsLoginRequest] = useState(false);
   const [errorMessage, setErrorMessage] = useState();
@@ -48,7 +47,7 @@ const SignupForm = ({ switchAuthState }) => {
         signinForm.resetForm();
         dispatch(setUser(response));
         dispatch(setAuthModalOpen(false));
-        navigate("/");
+        toast.success("Sign Up successful");
       }
 
       if (err) setErrorMessage(err.message);
